@@ -18,7 +18,7 @@ html, body {
     height: 100vh;
     z-index: -1;
     background-color: rgb(202, 202, 202);
-    pointer-events: none; /* Allow mouse events to pass through */
+    /* pointer-events: none;  */
 }
 
 body {
