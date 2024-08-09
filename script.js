@@ -41,3 +41,7 @@ function loadPortfolio() {
     mainContainer.innerHTML = '';
 
 }
+
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
