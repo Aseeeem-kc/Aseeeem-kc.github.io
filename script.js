@@ -1,3 +1,9 @@
+// Load home section by default when the page is loaded
+document.addEventListener('DOMContentLoaded', (event) => {
+    loadHome();
+});
+
+
 const mainContent = document.querySelector('.content');
 
 // Function to load the home section
@@ -17,66 +23,113 @@ function loadHome() {
 // Function to load the portfolio section
 function loadPortfolio() {
     mainContent.innerHTML = `
-        <div class="portfolio-section">
-            <div class="main-content">
-                <!-- Project Section -->
-                <div class="project-section">
-                    <div class="project-image-section">
-                        <img src="images/batman.jpg" alt="Project Image" class="project-image">
-                    </div>
-                    <div class="title-desc-section">
-                        <h2 class="project-title">Project Title</h2>
-                        <p class="project-description">Brief description of the project. Explain what the project is about, the technologies used, and any other relevant details.</p>
-                    </div>
+       <div class="projects-section">
+    <div class="main-content">
+        <h2>Projects</h2>
+        <div class="cards-container">
+            <div class="project-card">
+                <div class="card-image">
+                    <img src="images/project1.jpg" alt="Project Image">
                 </div>
-                <div class="project-section">
-                    <div class="project-image-section">
-                        <img src="images/batman.jpg" alt="Project Image" class="project-image">
-                    </div>
-                    <div class="title-desc-section">
-                        <h2 class="project-title">Project Title</h2>
-                        <p class="project-description">Brief description of the project. Explain what the project is about, the technologies used, and any other relevant details.</p>
-                    </div>
+                <div class="card-info">
+                    <h2 class="project-title">Project Title</h2>
+                    <p class="project-stack">Stack Used: HTML, CSS, JavaScript</p>
                 </div>
-                <div class="project-section">
-                    <div class="project-image-section">
-                        <img src="images/instagram.png" alt="Project Image" class="project-image">
-                    </div>
-                    <div class="title-desc-section">
-                        <h2 class="project-title">Project Title</h2>
-                        <p class="project-description">Brief description of the project. Explain what the project is about, the technologies used, and any other relevant details.</p>
-                    </div>
-                </div>
-                <!-- Skillset Section -->
-                <div class="skillset-section">
-                    <h2 class="skillset-title">My Skillset</h2>
-                    <div class="skill">
-                        <p>Web Development- HTML, CSS, JS, PHP, FastAPI, Django</p>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 100%; background-color: #4CAF50;"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <p>Data Structures and algorithm</p>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 85%; background-color: #2196F3;"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <p>JavaScript</p>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 80%; background-color: #FF9800;"></div>
-                        </div>
-                    </div>
-                    <!-- Add more skills as needed -->
+                <div class="card-description">
+                    <p>Brief description of the project. Explain what the project is about, the technologies used, and any other relevant details.</p>
                 </div>
             </div>
-        </div>`;
+            <div class="project-card">
+                <div class="card-image">
+                    <img src="images/linkedin.png" alt="Project Image">
+                </div>
+                <div class="card-info">
+                    <h2 class="project-title">Project Title</h2>
+                    <p class="project-stack">Stack Used: Python, Django</p>
+                </div>
+                <div class="card-description">
+                    <p>Brief description of the project. Explain what the project is about, the technologies used, and any other relevant details.</p>
+                </div>
+            </div>
+             <div class="project-card">
+                <div class="card-image">
+                    <img src="images/linkedin.png" alt="Project Image">
+                </div>
+                <div class="card-info">
+                    <h2 class="project-title">Project Title</h2>
+                    <p class="project-stack">Stack Used: Python, Django</p>
+                </div>
+                <div class="card-description">
+                    <p>Brief description of the project. Explain what the project is about, the technologies used, and any other relevant details.</p>
+                </div>
+            </div>
+             <div class="project-card">
+                <div class="card-image">
+                    <img src="images/linkedin.png" alt="Project Image">
+                </div>
+                <div class="card-info">
+                    <h2 class="project-title">Project Title</h2>
+                    <p class="project-stack">Stack Used: Python, Django</p>
+                </div>
+                <div class="card-description">
+                    <p>Brief description of the project. Explain what the project is about, the technologies used, and any other relevant details.</p>
+                </div>
+            </div>
+            <!-- Add more cards as needed -->
+        </div>
+    </div>
+</div>
+
+
+`;
+}
+
+
+// function to load blog
+function loadBlog() {
+    mainContent.innerHTML = `
+        <div class="blogs-section">
+        <h2>Blogs</h2> 
+    <div class="main-content">
+        <!-- Blogs Section -->
+        
+        <div class="blog-post">
+            <div class="blog-image-section">
+                <img src="images/batman.jpg" alt="Blog Image" class="blog-image">
+            </div>
+            <div class="title-desc-section">
+                <h2 class="blog-title">Blog Title</h2>
+                <p class="blog-description">Brief summary of the blog post. Introduce the topic, discuss the key points, and provide a compelling reason for readers to dive into the full post.</p>
+            </div>
+        </div>
+        <div class="blog-post">
+            <div class="blog-image-section">
+                <img src="images/batman.jpg" alt="Blog Image" class="blog-image">
+            </div>
+            <div class="title-desc-section">
+                <h2 class="blog-title">Blog Title</h2>
+                <p class="blog-description">Brief summary of the blog post. Introduce the topic, discuss the key points, and provide a compelling reason for readers to dive into the full post.</p>
+            </div>
+        </div>
+        <div class="blog-post">
+            <div class="blog-image-section">
+                <img src="images/instagram.png" alt="Blog Image" class="blog-image">
+            </div>
+            <div class="title-desc-section">
+                <h2 class="blog-title">Blog Title</h2>
+                <p class="blog-description">Brief summary of the blog post. Introduce the topic, discuss the key points, and provide a compelling reason for readers to dive into the full post.</p>
+            </div>
+        </div>
+    </div>
+</div>
+`;
 }
 
 // Add event listeners for buttons
 const HomeButton = document.querySelector('.home-button');
 const portfolioButton = document.querySelector('.portfolio-button');
+const blogButton = document.querySelector('.blogs-button');
+
 
 HomeButton.addEventListener('click', () => {
     loadHome();
@@ -86,7 +139,7 @@ portfolioButton.addEventListener('click', () => {
     loadPortfolio();
 });
 
-// Load home section by default when the page is loaded
-document.addEventListener('DOMContentLoaded', (event) => {
-    loadHome();
+blogButton.addEventListener('click', () => {
+    loadBlog();
 });
+

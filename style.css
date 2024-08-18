@@ -119,9 +119,9 @@ footer h2 {
 }
 
 
-/* portfolio page */
+/* blogs page */
 
-.portfolio-section {
+.blogs-section {
     padding: 0px;
     border-radius: 15px;
 }
@@ -133,60 +133,128 @@ footer h2 {
     border-radius: 10px;
 }
 
-.project-section{
+.blog-post {
     width: 100%;
-    margin-top:20px;
-    display:flex;
+    margin-top: 20px;
+    display: flex;
     align-items: center;
     justify-content: center;
     background-color: transparent; /* Transparent background for each section */
 }
-.project-image-section{
-    width:20%;
-    margin-right:20px;
 
+.blog-image-section {
+    width: 20%;
+    margin-right: 20px;
 }
-.title-desc-section{
+
+.title-desc-section {
     width: 80%;
 }
 
-.skillset-section {
-    width: 60%;
-    background-color: transparent; /* Transparent background for each section */
-}
-
-.project-image {
+.blog-image {
     width: 100%;
     border-radius: 10px;
 }
 
-.project-title {
+.blog-title {
     font-size: 24px;
     margin: 20px 0 10px;
 }
 
-.project-description {
+.blog-description {
     font-size: 16px;
     color: #555;
 }
 
-.skillset-title {
-    font-size: 24px;
-    margin-bottom: 20px;
+
+/* projects section */
+.projects-section {
+    padding: 20px;
 }
 
-.skill {
-    margin-bottom: 15px;
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.skill-bar {
-    width: 100%;
-    background-color: #ddd;
-    border-radius: 10px;
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-card {
+    width: calc(50% - 20px); /* Two cards per row with a gap */
+    background-color: rgb(202, 202, 202, 0.5);
+    border-radius: 20px;
     overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.skill-level {
-    height: 10px;
-    border-radius: 10px;
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: rgb(202, 202, 202);;
+}
+
+.card-image {
+    width: 80%;
+    height: 250px; /* Set a fixed height for consistency */
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto; /* Center the image section */
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the area while maintaining aspect ratio */
+    display: block;
+}
+
+.card-info {
+    width: 80%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.project-title, .project-stack {
+    margin: 0;
+    text-align: center;
+}
+
+.project-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.project-stack {
+    font-size: 14px;
+    color: #777;
+}
+
+.card-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background: rgb(202, 202, 202);;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.project-card:hover .card-description {
+    opacity: 1;
 }
