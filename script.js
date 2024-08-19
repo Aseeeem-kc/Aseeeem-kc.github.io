@@ -43,6 +43,7 @@ function loadPortfolio() {
                     <img style="height: 30px" src="images/link_icon.png" alt="Link">
                 </div>
             </div>
+            
              
 
             
