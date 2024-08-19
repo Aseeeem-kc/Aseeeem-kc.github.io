@@ -29,53 +29,24 @@ function loadPortfolio() {
         <div class="cards-container">
             <div class="project-card">
                 <div class="card-image">
-                    <img src="images/project1.jpg" alt="Project Image">
+                    <img src="images/upstart_poster.png" alt="Project Image">
                 </div>
                 <div class="card-info">
-                    <h2 class="project-title">Project Title</h2>
-                    <p class="project-stack">Stack Used: HTML, CSS, JavaScript</p>
+                    <h2 class="project-title">Upstart</h2>
+                    <p class="project-stack">Python, Django, HTML, Tailwind, sqlite</p>
                 </div>
                 <div class="card-description">
-                    <p>Brief description of the project. Explain what the project is about, the technologies used, and any other relevant details.</p>
+                    <p>An online marketplace where every user can list and buy all categories of products.<br>Features: Authentication, CustomUser, CRUD actions, Image Gallery</p>
+                </div>
+                 <div class="icon-container">
+                    <img style="height: 30px" src="images/github.png" alt="GitHub">
+                    <img style="height: 30px" src="images/link_icon.png" alt="Link">
                 </div>
             </div>
-            <div class="project-card">
-                <div class="card-image">
-                    <img src="images/linkedin.png" alt="Project Image">
-                </div>
-                <div class="card-info">
-                    <h2 class="project-title">Project Title</h2>
-                    <p class="project-stack">Stack Used: Python, Django</p>
-                </div>
-                <div class="card-description">
-                    <p>Brief description of the project. Explain what the project is about, the technologies used, and any other relevant details.</p>
-                </div>
-            </div>
-             <div class="project-card">
-                <div class="card-image">
-                    <img src="images/linkedin.png" alt="Project Image">
-                </div>
-                <div class="card-info">
-                    <h2 class="project-title">Project Title</h2>
-                    <p class="project-stack">Stack Used: Python, Django</p>
-                </div>
-                <div class="card-description">
-                    <p>Brief description of the project. Explain what the project is about, the technologies used, and any other relevant details.</p>
-                </div>
-            </div>
-             <div class="project-card">
-                <div class="card-image">
-                    <img src="images/linkedin.png" alt="Project Image">
-                </div>
-                <div class="card-info">
-                    <h2 class="project-title">Project Title</h2>
-                    <p class="project-stack">Stack Used: Python, Django</p>
-                </div>
-                <div class="card-description">
-                    <p>Brief description of the project. Explain what the project is about, the technologies used, and any other relevant details.</p>
-                </div>
-            </div>
-            <!-- Add more cards as needed -->
+             
+
+            
+           
         </div>
     </div>
 </div>
@@ -93,33 +64,28 @@ function loadBlog() {
     <div class="main-content">
         <!-- Blogs Section -->
         
+        <a style = "text-decoration:none" href = "https://allbachelor.com/2024/04/03/exploratory-data-analysis-overview-and-techniques/">
         <div class="blog-post">
             <div class="blog-image-section">
-                <img src="images/batman.jpg" alt="Blog Image" class="blog-image">
+                <img src="images/eda-blog-poster.jpg" alt="Blog Image" class="blog-image">
             </div>
             <div class="title-desc-section">
-                <h2 class="blog-title">Blog Title</h2>
-                <p class="blog-description">Brief summary of the blog post. Introduce the topic, discuss the key points, and provide a compelling reason for readers to dive into the full post.</p>
+                <h2 class="blog-title">Exploratory Data Analysis: Overview and Techniques</h2>
+                <p class="blog-description">Get to know what Exploratory  Data Analysis (EDA) is and its technique along with a simple example on a dataset.</p>
             </div>
         </div>
+        </a>
+        <a style = "text-decoration:none" href = "https://medium.com/@ashimkc7297/reinforcement-learning-for-game-ai-1ffc8f612dda">
         <div class="blog-post">
             <div class="blog-image-section">
-                <img src="images/batman.jpg" alt="Blog Image" class="blog-image">
+                <img src="images/reinforcement_learning_for_game_ai_poster.webp" alt="Blog Image" class="blog-image">
             </div>
             <div class="title-desc-section">
-                <h2 class="blog-title">Blog Title</h2>
-                <p class="blog-description">Brief summary of the blog post. Introduce the topic, discuss the key points, and provide a compelling reason for readers to dive into the full post.</p>
+                <h2 class="blog-title">Reinforcement learning for GAME AI</h2>
+                <p class="blog-description"> In this report, we try to know the roots of AI and game industries and explore one field where they collide, games that integrate reinforcement learning.</p>
             </div>
         </div>
-        <div class="blog-post">
-            <div class="blog-image-section">
-                <img src="images/instagram.png" alt="Blog Image" class="blog-image">
-            </div>
-            <div class="title-desc-section">
-                <h2 class="blog-title">Blog Title</h2>
-                <p class="blog-description">Brief summary of the blog post. Introduce the topic, discuss the key points, and provide a compelling reason for readers to dive into the full post.</p>
-            </div>
-        </div>
+        
     </div>
 </div>
 `;
