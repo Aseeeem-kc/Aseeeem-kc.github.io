@@ -145,3 +145,16 @@ footer {
     color: inherit; /* Inherit color from parent */
     text-decoration: none; /* Remove underline from links */
 }
+/* Responsive Styles */
+@media (max-width: 768px) { /* For tablets and smaller screens */
+    
+    .connect-container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        gap: 10px; /* Reduced gap between items */
+    }
+
+    .connect-item {
+        width: 90%; /* Ensure items take full width on small screens */
+        justify-content: center; /* Center content in the item box */
+    }
+}
