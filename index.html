@@ -1,57 +1,860 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ashim k chhetri</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div id="particles-js"></div>
-    <div class="container">
-        <header>
-            <div class="image-section">
-                <img src="images/batman.jpg" alt="profile photo" class="profile-photo">
-                <h1>Ashim kc</h1>
-                <p>Computer Science Student</p>
-                
-            </div>
-           
-        </header> 
-        <div class="content">
-       
-       
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ashim kc</title>
+
+    <!--
+    - favicon
+  -->
+    <link
+      rel="shortcut icon"
+      href="./images/Ashim_portfolio_image.png"
+      type="image/x-icon"
+    />
+
+    <!--
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!--
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!--
+    - #MAIN
+  -->
+
+    <main>
+      <!--
+      - #SIDEBAR
+    -->
+
+      <aside class="sidebar" data-sidebar>
+        <div class="sidebar-info">
+          <figure class="avatar-box">
+            <img
+              src="./images/Ashim_portfolio_image.png"
+              alt="Ashim kc"
+              width="80"
+            />
+          </figure>
+
+          <div class="info-content">
+            <h1 class="name" title="Ashim kc">Ashim kc</h1>
+
+            <p class="title">CS student</p>
+          </div>
+
+          <button class="info_more-btn" data-sidebar-btn>
+            <span>Show Contacts</span>
+
+            <ion-icon name="chevron-down"></ion-icon>
+          </button>
         </div>
-        
-        <footer>
-            <h2>Connect</h2>
-            <div class="connect-container">
-                <div class="connect-item">
-                    <a href="https://github.com/Aseeeem-kc" target="_blank">
-                        <img src="images/github.png" alt="GitHub Icon" class="connect-icon">
-                        <span class="connect-username">Aseeeem-kc</span>
-                    </a>
+
+        <div class="sidebar-info_more">
+          <div class="separator"></div>
+
+          <ul class="contacts-list">
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
+
+                <a href="mail:ashimkc7297@gmail.com" class="contact-link"
+                  >ashimkc7297@gmail.com</a
+                >
+              </div>
+            </li>
+
+            <!-- <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="phone-portrait-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Phone</p>
+
+                <a href="tel:+9779866121812" class="contact-link"
+                  >+9779866121812</a
+                >
+              </div>
+            </li> -->
+
+            <!-- <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="calendar-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Birthday</p>
+
+                <time datetime="1982-06-23">April 06, 2004</time>
+              </div>
+            </li> -->
+
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Location</p>
+
+                <address>Kathmandu, Nepal</address>
+              </div>
+            </li>
+          </ul>
+
+          <div class="separator"></div>
+
+          <ul class="social-list">
+            <li class="social-item">
+              <a
+                href="https://www.facebook.com/ashim.kc.12979/"
+                class="social-link" target="_blank"
+              >
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a
+                href="https://www.linkedin.com/in/ashim-kc-643501231/"
+                class="social-link" target="_blank"
+              >
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a href="https://github.com/Aseeeem-kc" target="_blank" class="social-link">
+                <ion-icon name="logo-github"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!--
+      - #main-content
+    -->
+
+      <div class="main-content">
+        <!--
+        - #NAVBAR
+      -->
+
+        <nav class="navbar">
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <button class="navbar-link active" data-nav-link>About</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Resume</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Portfolio</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Blog</button>
+            </li>
+
+            <!-- <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Contact</button>
+            </li> -->
+          </ul>
+        </nav>
+
+        <!--
+        - #ABOUT
+      -->
+
+        <article class="about active" data-page="about">
+          <header>
+            <h2 class="h2 article-title">About me</h2>
+          </header>
+
+          <section class="about-text">
+            <p>
+              I’m a Computer Science student passionate about AI and software development, focused on bridging the gap between AI research and real-world applications. With a strong foundation in both AI and backend development, I work on creating scalable, practical solutions that address real-world challenges.
+            </p>
+
+            <p>
+              My goal is to build intelligent systems and optimize backend infrastructures, making AI more accessible and impactful across industries. By merging cutting-edge technology with practical use cases, I aim to drive value and solve problems effectively.
+            </p>
+          </section>
+          <!--
+  - service
+-->
+          <section class="service">
+            <h3 class="h3 service-title">What I'm Doing</h3>
+
+            <ul class="service-list">
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="https://img.icons8.com/ios-filled/50/ffffff/artificial-intelligence.png"
+                    alt="machine learning icon"
+                    width="40"
+                  />
                 </div>
-                <div class="connect-item">
-                    <a href="https://www.instagram.com/aseeeem_12/" target="_blank">
-                        <img src="images/instagram.png" alt="Instagram Icon" class="connect-icon">
-                        <span class="connect-username">aseeeem_12</span>
-                    </a>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Backend development</h4>
+
+                  <p class="service-item-text">
+                    Building and managing server-side systems, databases, and APIs for web applications.
+                  </p>
                 </div>
-                <div class="connect-item">
-                    <a href="https://www.linkedin.com/in/ashim-kc-643501231/" target="_blank">
-                        <img src="images/linkedin.png" alt="LinkedIn Icon" class="connect-icon">
-                        <span class="connect-username">ashim-kc</span>
-                    </a>
+              </li>
+
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="https://img.icons8.com/ios-filled/50/ffffff/robot.png"
+                    alt="computer vision icon"
+                    width="40"
+                  />
                 </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Machine learning</h4>
+
+                  <p class="service-item-text">
+                    Developing algorithms that enable systems to learn from data and make predictions.
+                  </p>
+                </div>
+              </li>
+
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="https://img.icons8.com/ios-filled/50/ffffff/speech-bubble.png"
+                    alt="NLP icon"
+                    width="40"
+                  />
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">
+                    AI-Software Integration
+                  </h4>
+
+                  <p class="service-item-text">
+                    Integrating AI with software applications to create scalable and efficient solutions.
+                  </p>
+                </div>
+              </li>
+
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="https://img.icons8.com/ios-filled/50/ffffff/brain.png"
+                    alt="generative AI icon"
+                    width="40"
+                  />
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Generative AI</h4>
+
+                  <p class="service-item-text">
+                    Leveraging AI to craft novel content, transforming data patterns into creative, original outputs.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!--
+- testimonials
+-->
+<!-- 
+          <section class="testimonials">
+            <h3 class="h3 testimonials-title">Testimonials</h3>
+
+            <ul class="testimonials-list has-scrollbar">
+              <li class="testimonials-item">
+                <div class="content-card" data-testimonials-item>
+                  <figure class="testimonials-avatar-box">
+                    <img
+                      src="./assets/images/avatar-1.png"
+                      alt="Subham Raj Joshi"
+                      width="60"
+                      data-testimonials-avatar
+                    />
+                  </figure>
+
+                  <h4
+                    class="h4 testimonials-item-title"
+                    data-testimonials-title
+                  >
+                    Subham Raj Joshi
+                  </h4>
+
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      Rahul's guidance and expertise in AI helped me complete my
+                      project on time. His approach is methodical and
+                      understanding. Highly recommend working with him!
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="testimonials-item">
+                <div class="content-card" data-testimonials-item>
+                  <figure class="testimonials-avatar-box">
+                    <img
+                      src="./assets/images/avatar-2.png"
+                      alt="Laxmi Timalsina"
+                      width="60"
+                      data-testimonials-avatar
+                    />
+                  </figure>
+
+                  <h4
+                    class="h4 testimonials-item-title"
+                    data-testimonials-title
+                  >
+                    Laxmi Timalsina
+                  </h4>
+
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      Working with Banjara was an incredible experience. His
+                      dedication to delivering quality work is unmatched.
+                      Looking forward to more collaborations in the future!
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="testimonials-item">
+                <div class="content-card" data-testimonials-item>
+                  <figure class="testimonials-avatar-box">
+                    <img
+                      src="./assets/images/avatar-3.png"
+                      alt="Anusuya Dahal"
+                      width="60"
+                      data-testimonials-avatar
+                    />
+                  </figure>
+
+                  <h4
+                    class="h4 testimonials-item-title"
+                    data-testimonials-title
+                  >
+                    Anusuya Dahal
+                  </h4>
+
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      Rahul Dev Banjara has an exceptional grasp of technology
+                      and always knows the right solution. His professionalism
+                      and hard work made our project a success.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="testimonials-item">
+                <div class="content-card" data-testimonials-item>
+                  <figure class="testimonials-avatar-box">
+                    <img
+                      src="./assets/images/avatar-4.png"
+                      alt="Sarthak Sharma"
+                      width="60"
+                      data-testimonials-avatar
+                    />
+                  </figure>
+
+                  <h4
+                    class="h4 testimonials-item-title"
+                    data-testimonials-title
+                  >
+                    Sarthak Sharma
+                  </h4>
+
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      Banjara's insights in the machine learning space are
+                      extremely valuable. He's a reliable and innovative
+                      professional who always delivers beyond expectations.
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section> -->
+
+          <!--
+- testimonials modal
+-->
+
+          <div class="modal-container" data-modal-container>
+            <div class="overlay" data-overlay></div>
+
+            <section class="testimonials-modal">
+              <button class="modal-close-btn" data-modal-close-btn>
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+
+              <div class="modal-img-wrapper">
+                <figure class="modal-avatar-box">
+                  <img
+                    src="./assets/images/avatar-1.png"
+                    alt="Subham Raj Joshi"
+                    width="80"
+                    data-modal-img
+                  />
+                </figure>
+
+                <img src="./assets/images/icon-1.svg" alt="quote icon" />
+              </div>
+
+              <div class="modal-content">
+                <h4 class="h3 modal-title" data-modal-title>
+                  Subham Raj Joshi
+                </h4>
+
+                <time datetime="2021-06-14">14 June, 2021</time>
+
+                <div data-modal-text>
+                  <p>
+                    Rahul's guidance and expertise in AI helped me complete my
+                    project on time. His approach is methodical and
+                    understanding. Highly recommend working with him!
+                  </p>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!--
+          - clients
+        -->
+
+          <!-- <section class="clients">
+            <h3 class="h3 clients-title">Clients</h3>
+
+            <ul class="clients-list has-scrollbar">
+              <li class="clients-item">
+                <a href="#">
+                  <p style="color: white">
+                    Oh, look! No clients yet. How shocking. But don't worry, I'm
+                    sure they'll appear here... eventually. Stay tuned. Or
+                    don’t. It’s fine, really.
+                  </p>
+                </a>
+              </li> -->
+
+              <!-- <li class="clients-item">
+                <a href="#">
+                  <img
+                    src="./assets/images/logo-2-color.png"
+                    alt="client logo"
+                  />
+                </a>
+              </li> -->
+
+              <!-- <li class="clients-item">
+                <a href="#">
+                  <img
+                    src="./assets/images/logo-3-color.png"
+                    alt="client logo"
+                  />
+                </a>
+              </li> -->
+
+              <!-- <li class="clients-item">
+                <a href="#">
+                  <img
+                    src="./assets/images/logo-4-color.png"
+                    alt="client logo"
+                  />
+                </a>
+              </li> -->
+
+              <!-- <li class="clients-item">
+                <a href="#">
+                  <img
+                    src="./assets/images/logo-5-color.png"
+                    alt="client logo"
+                  />
+                </a>
+              </li> -->
+
+              <!-- <li class="clients-item">
+                <a href="#">
+                  <img
+                    src="./assets/images/logo-6-color.png"
+                    alt="client logo"
+                  />
+                </a>
+              </li> -->
+            </ul>
+          </section>
+        </article>
+
+        <!--
+        - #RESUME
+      -->
+
+        <article class="resume" data-page="resume">
+          <header>
+            <h2 class="h2 article-title">Resume</h2>
+          </header>
+
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+
+              <h3 class="h3">Education</h3>
             </div>
-            <p>ashim k chhetri &copy; 2024</p>
-        </footer>
 
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  B(Hons) in Computer Science
+                </h4>
+                <span>2023 - 2026</span>
+                <p class="timeline-text" style="color: #ffffff">
+                  Herald College Kathmandu
+                </p>
+              </li>
 
-    </div>  
-    <script src="particles.js"></script>
-    <script src = "script.js"></script>
-    <script src="app.js"></script>
-</body>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Higher Secondary School</h4>
+                <span>2021 - 2023</span>
+                <p class="timeline-text" style="color: #ffffff">
+                  St. Xaviers School, Jawalakhel
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+
+              <h3 class="h3">Experience</h3>
+            </div>
+
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">AI Learners Community Member</h4>
+                <span>April 2024 - Present</span>
+                <p class="timeline-text" style="color: #ffffff">
+                  Collaborative platform for AI to share knowledge grow together.
+                </p>
+                <ul style="color: #ffffff">
+                  <li>- Events: fyp demonstration, Machine learning workshop</li>
+                  
+                  <li>- Collaboration, Communication and Leadership </li>
+                </ul>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">SmartSites</h4>
+                <span>Jun 2024 - August 2024</span>
+                <p class="timeline-text" style="color: #ffffff">
+                  Developed and maintained dynamic websites for high-demand international clients.
+                </p>
+                <ul style="color: #ffffff">
+                  <li>
+                    - Backend development, Database, Site maintainance
+                  </li>
+                  <li>- Python, Javascript, PHP</li>
+                  <li>- MySql, Wordpress plugins</li>
+                </ul>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Codynn</h4>
+                <span>Jan 2024 - May 2024</span>
+                <p class="timeline-text" style="color: #ffffff">
+                  Worked in a research and development role in a Ed-tech startup.
+                </p>
+                <ul style="color: #ffffff">
+                  <li>
+                    
+                  </li>
+                  <li>- Created educational content</li>
+                  <li>- Research work on machine learning, Recommender system</li>
+                </ul>
+              </li>
+            </ol>
+          </section>
+        </article>
+
+        <!--
+  - #PORTFOLIO
+-->
+<!--  -->
+        <article class="portfolio" data-page="portfolio">
+          <header>
+            <h2 class="h2 article-title">Portfolio</h2>
+          </header>
+
+          <section class="projects">
+            <ul class="filter-list">
+              <li class="filter-item">
+                <button class="active">Do checkout the projects I have created below :)</button>
+              </li>
+              
+            </ul>
+
+            <div class="filter-select-box">
+              <button class="filter-select" data-select>
+                <div class="select-value" data-selecct-value>
+                  Select category
+                </div>
+                <div class="select-icon">
+                  <ion-icon name="chevron-down"></ion-icon>
+                </div>
+              </button>
+
+              <!-- <ul class="select-list">
+                <li class="select-item">
+                  <button data-select-item>All</button>
+                </li>
+                <li class="select-item">
+                  <button data-select-item>Machine Learning</button>
+                </li>
+                <li class="select-item">
+                  <button data-select-item>Web Development</button>
+                </li>
+                <li class="select-item">
+                  <button data-select-item>Python & Java Projects</button>
+                </li>
+              </ul> -->
+            </div>
+
+            <ul class="project-list">
+              <!-- Machine Learning Projects -->
+              <!-- <li
+                class="project-item active"
+                data-filter-item
+                data-category="machine learning"
+              >
+                <a
+                  href="https://github.com/devrahulbanjara/Document-and-Record-Management"
+                >
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img
+                      src="assets/images/random.jpg"
+                      alt="Document and Record Management"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">Document and Record Management</h3>
+                  <p class="project-category">Machine Learning</p>
+                </a>
+              </li> -->
+              <h1 class="project-title">will be added soon...</h1>
+              
+
+              
+              
+            </ul>
+          </section>
+        </article>
+
+        <!--
+        - #BLOG
+-->
+
+        <article class="blog" data-page="blog">
+          <header>
+            <h2 class="h2 article-title">Blog</h2>
+          </header>
+
+          <section class="blog-posts">
+            <ul class="blog-posts-list">
+              <!-- Your Blog Post -->
+              <!-- <li class="blog-post-item">
+                <a
+                  href="https://medium.com/@devrahulbanjara/using-yolov8-to-localize-key-regions-in-document-images-1c51d2e44643"
+                  target="_blank"
+                >
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/yolov8.jpg"
+                      alt="YOLOv8 to localize key regions in document images"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Machine Learning</p>
+
+                      <span class="dot"></span>
+
+                      <time datetime="2024-12-16">Aug 09, 2024</time>
+                    </div>
+
+                    <h3 class="h3 blog-item-title">
+                      Using YOLOv8 to Localize Key Regions in Document Images
+                    </h3>
+
+                    <p class="blog-text">
+                      This blog explores the use of YOLOv8 for localizing key
+                      regions in document images, an essential task for document
+                      analysis and automation.
+                    </p>
+                  </div>
+                </a>
+              </li> -->
+              <h1 class="project-title">will be added soon...</h1>
+              <!-- 
+      Placeholder for other blog posts in the template
+      <li class="blog-post-item">
+        <a href="#">
+          <figure class="blog-banner-box">
+            <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+          </figure>
+
+          <div class="blog-content">
+
+            <div class="blog-meta">
+              <p class="blog-category">Design</p>
+
+              <span class="dot"></span>
+
+              <time datetime="2022-02-23">Fab 23, 2022</time>
+            </div>
+
+            <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
+
+            <p class="blog-text">
+              Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+            </p>
+
+          </div>
+
+        </a>
+      </li> -->
+
+              <!-- Other blog posts can follow the same pattern... -->
+            </ul>
+          </section>
+        </article>
+
+        <!--
+  - #CONTACT
+-->
+
+        <!-- <article class="contact" data-page="contact">
+          <header>
+            <h2 class="h2 article-title">Contact</h2>
+          </header>
+
+          <section class="mapbox" data-mapbox>
+            <figure>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15335.578226520003!2d85.29948228260386!3d27.746396731550657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19004c7f178d%3A0x7a4e2e4073c3556!2sTarkeshwor-8!5e0!3m2!1sen!2snp!4v1734339289307!5m2!1sen!2snp"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                width="400"
+                height="300"
+                loading="lazy"
+              ></iframe>
+            </figure>
+          </section>
+
+          <section class="contact-form">
+            <h3 class="h3 form-title">Contact Form</h3>
+
+            <form
+              action="https://formspree.io/f/xgvejogq"
+              method="POST"
+              class="form"
+              data-form
+            >
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  name="fullname"
+                  class="form-input"
+                  placeholder="Full name"
+                  required
+                  data-form-input
+                />
+                <input
+                  type="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="Email address"
+                  required
+                  data-form-input
+                />
+              </div>
+
+              <textarea
+                name="message"
+                class="form-input"
+                placeholder="Your Message"
+                required
+                data-form-input
+              ></textarea>
+
+              <button class="form-btn" type="submit" disabled data-form-btn>
+                <ion-icon name="paper-plane"></ion-icon>
+                <span>Send Message</span>
+              </button>
+            </form>
+          </section>
+        </article>
+      </div>
+    </main> -->
+
+    <!--
+    - custom js link
+  -->
+    <script src="./script.js"></script>
+
+    <!--
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>
