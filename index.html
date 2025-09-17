@@ -58,7 +58,6 @@
       text-decoration: underline;
     }
 
-
     section {
       display: none; /* hidden by default */
       margin: 2rem 0;
@@ -90,34 +89,50 @@
     }
 
     .experience-item {
-  padding-bottom: 1rem;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid #ccc; /* grey line */
-}
-  .blog-item-link {
-  text-decoration: none;
-  color: inherit; /* keeps text color same as normal */
-  display: block;
-}
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #ccc;
+    }
 
-.blog-item {
-  padding: 1rem 0;
-  border-bottom: 1px solid #ccc;
-  transition: background-color 0.2s;
-}
+    .blog-item-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
 
-.blog-item:hover {
-  background-color: #f9f9f9; /* subtle hover effect */
-}
+    .blog-item {
+      padding: 1rem 0;
+      border-bottom: 1px solid #ccc;
+      transition: background-color 0.2s;
+    }
 
-.blog-item h3 {
-  margin: 0 0 0.3rem 0;
-}
+    .blog-item:hover {
+      background-color: #f9f9f9;
+    }
 
-.blog-item p {
-  margin: 0.2rem 0;
-}
+    .blog-item h3 {
+      margin: 0 0 0.3rem 0;
+    }
 
+    .blog-item p {
+      margin: 0.2rem 0;
+    }
+
+    /* Button style for mobile PDF links */
+    .pdf-link {
+      display: inline-block;
+      margin: 1rem 0;
+      padding: 0.6rem 1.2rem;
+      background-color: #444;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background-color 0.2s;
+    }
+
+    .pdf-link:hover {
+      background-color: #000;
+    }
   </style>
 </head>
 <body>
@@ -128,7 +143,6 @@
       <a class="active" onclick="showSection(event, 'home')">Home</a>
       <a onclick="showSection(event, 'blog')">Blog</a>
       <a onclick="showSection(event, 'experience')">Experience</a>
-      <!-- <a onclick="showSection(event, 'projects')">Projects</a> -->
       <a onclick="showSection(event, 'publications')">Publications</a>
       <a onclick="showSection(event, 'resume')">Resume</a>
       <a onclick="showSection(event, 'recommendations')">Recommendations</a>
@@ -136,42 +150,43 @@
   </header>
 
   <main>
-  <section id="home" class="active">
-  <h2>Home</h2>
-  <p>
-    Hello! I'm Ashim KC, a Computer Science student passionate about AI and software development. My focus is on bridging the gap between AI research and real-world applications by building intelligent systems and optimized backend infrastructures.
-  </p>
-  
-  <h3>My Expertise</h3>
-  <ul>
-    <li> <strong>Backend Development:</strong> Building and managing server-side systems, databases, and APIs for web applications using modern frameworks and technologies.</li>
-    <li> <strong>Machine Learning:</strong> Developing algorithms that enable systems to learn from data and make predictions, with focus on practical applications.</li>
-    <li> <strong>AI-Software Integration:</strong> Integrating AI with software applications to create scalable and efficient solutions that solve real-world problems.</li>
-    <li> <strong>Generative AI:</strong> Leveraging AI to craft novel content, transforming data patterns into creative, original outputs and solutions.</li>
-  </ul>
+    <!-- HOME -->
+    <section id="home" class="active">
+      <h2>Home</h2>
+      <p>
+        Hello! I'm Ashim KC, a Computer Science student passionate about AI and software development. My focus is on bridging the gap between AI research and real-world applications by building intelligent systems and optimized backend infrastructures.
+      </p>
+      
+      <h3>My Expertise</h3>
+      <ul>
+        <li><strong>Backend Development:</strong> Building and managing server-side systems, databases, and APIs for web applications.</li>
+        <li><strong>Machine Learning:</strong> Developing algorithms for data-driven predictions and decision-making.</li>
+        <li><strong>AI-Software Integration:</strong> Creating scalable software solutions powered by AI.</li>
+        <li><strong>Generative AI:</strong> Crafting novel content by transforming data patterns into creative outputs.</li>
+      </ul>
 
-  <!-- Social Media Links -->
-<div class="social-links" style="margin-top: 2rem; text-align:center;">
-  <a href="https://www.linkedin.com/in/ashimkchhetri/" target="_blank">
-    <img src="images/linkedin.png" alt="LinkedIn" style="width:25px; border-radius:5px; margin:0 10px;">
-  </a>
-  <a href="https://github.com/aseeeem-kc/" target="_blank">
-    <img src="images/github.png" alt="GitHub" style="width:25px; border-radius:5px; margin:0 10px;">
-  </a>
-  <a href="https://www.instagram.com/aseeeem_12/" target="_blank">
-    <img src="images/instagram.png" alt="Instagram" style="width:25px; border-radius:5px; margin:0 10px;">
-  </a>
-</div>
-<!-- Quote -->
-<div class="home-quote" style="margin-top: 1.5rem; font-style: italic; text-align:center; color:#555;">
-  <p>“Unspotted by pleasure, undaunted by pain.”</p>
-  <p>- Marcus Aurelius, <em>Meditations*</em></p>
-</div>
-</section>
+      <!-- Social Links -->
+      <div class="social-links" style="margin-top: 2rem; text-align:center;">
+        <a href="https://www.linkedin.com/in/ashimkchhetri/" target="_blank">
+          <img src="images/linkedin.png" alt="LinkedIn" style="width:25px; border-radius:5px; margin:0 10px;">
+        </a>
+        <a href="https://github.com/aseeeem-kc/" target="_blank">
+          <img src="images/github.png" alt="GitHub" style="width:25px; border-radius:5px; margin:0 10px;">
+        </a>
+        <a href="https://www.instagram.com/aseeeem_12/" target="_blank">
+          <img src="images/instagram.png" alt="Instagram" style="width:25px; border-radius:5px; margin:0 10px;">
+        </a>
+      </div>
 
+      <!-- Quote -->
+      <div class="home-quote" style="margin-top: 1.5rem; font-style: italic; text-align:center; color:#555;">
+        <p>“Unspotted by pleasure, undaunted by pain.”</p>
+        <p>- Marcus Aurelius, <em>Meditations</em></p>
+      </div>
+    </section>
 
-
-<section id="blog">
+    <!-- BLOG -->
+    <section id="blog">
   <h2>Blog</h2>
 
   <a href="https://medium.com/@ashimkc7297/implementing-redis-in-a-django-application-03060e516209" target="_blank" class="blog-item-link">
@@ -208,9 +223,8 @@
 
 </section>
 
-
-
-    <section id="experience">
+    <!-- Experience -->
+     <section id="experience">
   <h2>Experience</h2>
 
   <div class="experience-item">
@@ -232,41 +246,27 @@
   </div>
 </section>
 
-
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li>Web Chatbot with LangChain & Streamlit</li>
-        <li>AWS Calculator API with Lambda</li>
-        <li>Game AI with Reinforcement Learning</li>
-      </ul>
+    <!-- PUBLICATIONS -->
+    <section id="publications">
+      <h2>Publications</h2>
+      <p>
+        <strong>LLM Ensemble: Multi-LLM framework for Creative Mathematics Problem Generation</strong><br>
+        <i>Rohit Khadka, Ashim KC</i><br> 
+        <em>Ohio Journal of School Mathematics (Under Review, 2025)</em><br>
+        Conducted under the guidance of Prof. Michael Todd Edwards.
+      </p>
     </section>
 
-  <section id="publications">
-  <h2>Publications</h2>
-  <p>
-    <strong>LLM Ensemble: Multi-LLM framework for Creative Mathematics Problem Generation</strong><br>
-    <i>Rohit Khadka, Ashim KC</i><br> 
-    <em>Ohio Journal of School Mathematics (Under Review, 2025)</em><br>
-    Conducted under the guidance of Prof. Michael Todd Edwards, this project proposes a multi-LLM system to generate curriculum-aligned, cognitively rich math problems. Research funded by the journal to support LLM experimentation and development.
-  </p>
-</section>
-
-
-
+    <!-- RESUME -->
     <section id="resume">
-  <h2>Resume</h2>
-  <p>
-    You can view my resume below and download it.
-  </p>
-  <iframe class="pdf-embed" src="ashim_resume.pdf" type="application/pdf"></iframe>
-</section>
+      <h2>Resume</h2>
+      <div id="resume-container"></div>
+    </section>
 
-
+    <!-- RECOMMENDATIONS -->
     <section id="recommendations">
       <h2>Recommendations</h2>
-      <iframe class="pdf-embed" src="Ashim_KC_Letter_of_Recommendation-1.pdf" type="application/pdf"></iframe>
+      <div id="recommend-container"></div>
       <p>By: Michael Todd Edwards, Ph. D.</p>
     </section>
   </main>
@@ -277,21 +277,24 @@
 
   <script>
     function showSection(event, id) {
-      // Hide all sections
-      document.querySelectorAll('section').forEach(sec => {
-        sec.classList.remove('active');
-      });
-
-      // Remove active from all nav links
-      document.querySelectorAll('nav a').forEach(link => {
-        link.classList.remove('active');
-      });
-
-      // Show the selected section
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+      document.querySelectorAll('nav a').forEach(link => link.classList.remove('active'));
       document.getElementById(id).classList.add('active');
-
-      // Mark clicked nav as active
       event.target.classList.add('active');
+    }
+
+    // Detect mobile
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    const resumeContainer = document.getElementById("resume-container");
+    const recommendContainer = document.getElementById("recommend-container");
+
+    if (isMobile) {
+      resumeContainer.innerHTML = `<a href="ashim_resume.pdf" target="_blank" class="pdf-link">Open Resume (PDF)</a>`;
+      recommendContainer.innerHTML = `<a href="Ashim_KC_Letter_of_Recommendation-1.pdf" target="_blank" class="pdf-link">Open Recommendation Letter (PDF)</a>`;
+    } else {
+      resumeContainer.innerHTML = `<iframe class="pdf-embed" src="ashim_resume.pdf"></iframe>`;
+      recommendContainer.innerHTML = `<iframe class="pdf-embed" src="Ashim_KC_Letter_of_Recommendation-1.pdf"></iframe>`;
     }
   </script>
 </body>
