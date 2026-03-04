@@ -7,11 +7,39 @@
   <link rel="icon" type="image/png" href="images/Ashim_portfolio_image.png">
 
   <style>
+    :root {
+      --bg-color: #1a1a1e;
+      --text-color: #e0e0e0;
+      --nav-color: #b0b0b0;
+      --nav-active-color: #ffffff;
+      --border-color: #333333;
+      --section-hover-bg: #252529;
+      --footer-color: #999999;
+      --pdf-btn-bg: #333333;
+      --pdf-btn-hover-bg: #444444;
+      --accent-color: #2d2d33;
+    }
+
+    html.light-mode {
+      --bg-color: #ffffff;
+      --text-color: #222222;
+      --nav-color: #808080;
+      --nav-active-color: #000000;
+      --border-color: #dddddd;
+      --section-hover-bg: #f9f9f9;
+      --footer-color: #555555;
+      --pdf-btn-bg: #444444;
+      --pdf-btn-hover-bg: #000000;
+      --accent-color: #f5f5f5;
+    }
+
     html, body {
       height: 100%;
       margin: 0;
       font-family: "Times New Roman", Times, serif;
-      color: #222;
+      color: var(--text-color);
+      background-color: var(--bg-color);
+      transition: background-color 0.3s, color 0.3s;
     }
 
     body {
@@ -27,6 +55,29 @@
     header {
       text-align: center;
       margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .theme-toggle {
+      margin-left: auto;
+      padding: 0.4rem 0.6rem;
+      border: none;
+      background: none;
+      color: var(--nav-color);
+      cursor: pointer;
+      font-size: 1.2rem;
+      transition: color 0.3s, filter 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      filter: grayscale(100%) opacity(0.7);
+    }
+
+    .theme-toggle:hover {
+      color: var(--nav-active-color);
+      filter: grayscale(100%) opacity(1);
     }
 
     .profile-img {
@@ -48,13 +99,14 @@
     nav a {
       margin: 0 0.75rem;
       text-decoration: none;
-      color: gray;
+      color: var(--nav-color);
       font-weight: 500;
       cursor: pointer;
+      transition: color 0.3s;
     }
 
     nav a.active {
-      color: black;
+      color: var(--nav-active-color);
       text-decoration: underline;
     }
 
@@ -70,7 +122,7 @@
     h2 {
       font-size: 1.5rem;
       margin-bottom: 1rem;
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid var(--border-color);
       padding-bottom: 0.3rem;
     }
 
@@ -78,20 +130,29 @@
     .pdf-embed {
       width: 100%;
       height: 500px;
-      border: 1px solid #ccc;
+      border: 1px solid var(--border-color);
+      background-color: var(--bg-color);
     }
 
     footer {
       text-align: center;
       margin-top: 0.5rem;
       font-size: 0.9rem;
-      color: #555;
+      color: var(--footer-color);
     }
 
     .experience-item {
+      padding: 1rem;
       padding-bottom: 1rem;
       margin-bottom: 1rem;
-      border-bottom: 1px solid #ccc;
+      border-bottom: 1px solid var(--border-color);
+      background-color: var(--accent-color);
+      border-radius: 4px;
+      transition: background-color 0.2s;
+    }
+
+    .experience-item:hover {
+      background-color: var(--section-hover-bg);
     }
 
     .blog-item-link {
@@ -101,13 +162,16 @@
     }
 
     .blog-item {
-      padding: 1rem 0;
-      border-bottom: 1px solid #ccc;
+      padding: 1rem;
+      border-bottom: 1px solid var(--border-color);
       transition: background-color 0.2s;
+      background-color: var(--accent-color);
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
     }
 
     .blog-item:hover {
-      background-color: #f9f9f9;
+      background-color: var(--section-hover-bg);
     }
 
     .blog-item h3 {
@@ -123,7 +187,7 @@
       display: inline-block;
       margin: 1rem 0;
       padding: 0.6rem 1.2rem;
-      background-color: #444;
+      background-color: var(--pdf-btn-bg);
       color: #fff;
       border-radius: 6px;
       text-decoration: none;
@@ -131,12 +195,13 @@
     }
 
     .pdf-link:hover {
-      background-color: #000;
+      background-color: var(--pdf-btn-hover-bg);
     }
   </style>
 </head>
 <body>
   <header>
+    <button class="theme-toggle" onclick="toggleTheme()">☀️</button>
     <img src="images/Ashim_portfolio_image.png" alt="Ashim KC" class="profile-img">
     <h1>Ashim KC</h1>
     <nav>
@@ -144,8 +209,6 @@
       <a onclick="showSection(event, 'blog')">Blog</a>
       <a onclick="showSection(event, 'experience')">Experience</a>
       <a onclick="showSection(event, 'publications')">Publications</a>
-      <a onclick="showSection(event, 'resume')">Resume</a>
-      <a onclick="showSection(event, 'recommendations')">Recommendations</a>
     </nav>
   </header>
 
@@ -228,22 +291,19 @@
   <h2>Experience</h2>
 
   <div class="experience-item">
+    <h3>SmartSites – Web Development Intern</h3>
+    <p><em>June 2024 – August 2024</em></p>
+    <p>- Built and maintained dynamic websites using Python, PHP, and MySQL</p>
+    <p>- Handled backend logic, database design, and WordPress plugin customization</p>
+    <p>- Collaborated with clients to implement features and ensure smooth site performance</p>
+  </div>
+
+  <div class="experience-item">
     <h3>AI Learners Community Leader</h3>
     <p><em>April 2024 – Present</em></p>
     <p>Leading a collaborative platform for AI enthusiasts to share knowledge and grow together through workshops and demonstrations.</p>
   </div>
 
-  <div class="experience-item">
-    <h3>SmartSites – Web Development Intern</h3>
-    <p><em>June 2024 – August 2024</em></p>
-    <p>Developed and maintained dynamic websites for international clients using Python, JavaScript, PHP, and MySQL.</p>
-  </div>
-
-  <div class="experience-item">
-    <h3>Codynn – Research and Development</h3>
-    <p><em>January 2024 – May 2024</em></p>
-    <p>Worked in a research and development role at an Ed-tech startup, focusing on machine learning and recommender systems.</p>
-  </div>
 </section>
 
     <!-- PUBLICATIONS -->
@@ -256,19 +316,6 @@
         Conducted under the guidance of Prof. Michael Todd Edwards.
       </p>
     </section>
-
-    <!-- RESUME -->
-    <section id="resume">
-      <h2>Resume</h2>
-      <div id="resume-container"></div>
-    </section>
-
-    <!-- RECOMMENDATIONS -->
-    <section id="recommendations">
-      <h2>Recommendations</h2>
-      <div id="recommend-container"></div>
-      <p>By: Michael Todd Edwards, Ph. D.</p>
-    </section>
   </main>
 
   <footer>
@@ -276,6 +323,40 @@
   </footer>
 
   <script>
+    // Theme toggle functionality
+    function toggleTheme() {
+      const html = document.documentElement;
+      const btn = document.querySelector('.theme-toggle');
+      
+      if (html.classList.contains('light-mode')) {
+        html.classList.remove('light-mode');
+        btn.textContent = '☀️';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        html.classList.add('light-mode');
+        btn.textContent = '🌙';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    // Initialize theme from localStorage or default to dark
+    function initTheme() {
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      const html = document.documentElement;
+      const btn = document.querySelector('.theme-toggle');
+      
+      if (savedTheme === 'light') {
+        html.classList.add('light-mode');
+        btn.textContent = '🌙';
+      } else {
+        html.classList.remove('light-mode');
+        btn.textContent = '☀️';
+      }
+    }
+
+    // Initialize theme on page load
+    window.addEventListener('DOMContentLoaded', initTheme);
+
     function showSection(event, id) {
       document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
       document.querySelectorAll('nav a').forEach(link => link.classList.remove('active'));
@@ -283,19 +364,7 @@
       event.target.classList.add('active');
     }
 
-    // Detect mobile
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-    const resumeContainer = document.getElementById("resume-container");
-    const recommendContainer = document.getElementById("recommend-container");
-
-    if (isMobile) {
-      resumeContainer.innerHTML = `<a href="ashim_resume.pdf" target="_blank" class="pdf-link">Open Resume (PDF)</a>`;
-      recommendContainer.innerHTML = `<a href="Ashim_KC_Letter_of_Recommendation-1.pdf" target="_blank" class="pdf-link">Open Recommendation Letter (PDF)</a>`;
-    } else {
-      resumeContainer.innerHTML = `<iframe class="pdf-embed" src="ashim_resume.pdf"></iframe>`;
-      recommendContainer.innerHTML = `<iframe class="pdf-embed" src="Ashim_KC_Letter_of_Recommendation-1.pdf"></iframe>`;
-    }
+   
   </script>
 </body>
 </html>
