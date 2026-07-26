@@ -82,7 +82,22 @@
   .mobile-menu .nav-cta{align-self:flex-start; margin-top:8px;}
   @media (max-width:860px){
     .nav-links, .nav-mid > .nav-cta{display:none;}
-    .burger{display:flex;}
+    .burger{display:flex; margin-right:10px;}
+    .brand{margin-left:10px;}
+    .burger span{width:18px;}
+    .mobile-menu a{font-size:24px;}
+    .mobile-menu .nav-cta{
+      font-size:13px;
+      padding:9px 16px;
+      background:var(--ink);
+      color:var(--paper);
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border:none;
+      border-radius:var(--radius);
+      width:max-content;
+    }
   }
   body.menu-open{overflow:hidden;}
 
