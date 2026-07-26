@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Ashim K.C. — CS Student &amp; Builder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0e0e0e;
+    --bg2: #161616;
+    --bg3: #1e1e1e;
+    --border: #2a2a2a;
+    --text: #e8e8e8;
+    --muted: #888;
+    --accent1: #4ade80;
+    --accent2: #60a5fa;
+    --accent3: #f472b6;
+    --accent4: #fb923c;
+    --font-head: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    --radius: 12px;
+    --nav-h: 60px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    height: var(--nav-h);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5%;
+    background: rgba(14,14,14,0.85);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
+  }
+  .nav-logo {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: -.5px;
+    border: 1px solid var(--border);
+    padding: 4px 12px;
+    border-radius: 6px;
+    color: var(--text);
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.78rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: color .2s;
+  }
+  .nav-links a:hover { color: var(--text); }
+  .nav-icon {
+    width: 36px; height: 36px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    display: grid; place-items: center;
+    cursor: pointer;
+    color: var(--muted);
+    font-size: 1rem;
+  }
+
+  /* ── SECTIONS ── */
+  section { padding: 100px 10%; }
+  .section-label {
+    font-size: 0.7rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 6px;
+    display: block;
+  }
+  h2.section-title {
+    font-family: var(--font-head);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -.03em;
+    color: var(--text);
+    margin-bottom: 48px;
+  }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    padding-top: calc(var(--nav-h) + 60px);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 60px;
+    align-items: center;
+  }
+  .hero-greeting {
+    font-size: 0.8rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .hero-greeting::before {
+    content: '';
+    display: inline-block;
+    width: 20px; height: 1px;
+    background: var(--muted);
+  }
+  h1.hero-name {
+    font-family: var(--font-head);
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 800;
+    letter-spacing: -.04em;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .hero-roles {
+    font-size: 1rem;
+    color: var(--muted);
+    font-weight: 300;
+    margin-bottom: 20px;
+    display: flex; gap: 8px; flex-wrap: wrap;
+  }
+  .hero-roles span { color: var(--text); font-weight: 400; }
+  .hero-roles .dot { color: var(--border); }
+  .hero-bio {
+    max-width: 480px;
+    color: #aaa;
+    font-size: 0.95rem;
+    margin-bottom: 32px;
+    line-height: 1.8;
+  }
+  .hero-btns { display: flex; gap: 12px; margin-bottom: 32px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all .2s;
+    border: 1px solid transparent;
+  }
+  .btn-outline {
+    background: transparent;
+    border-color: var(--border);
+    color: var(--text);
+  }
+  .btn-outline:hover { border-color: var(--text); }
+  .btn-accent {
+    background: var(--text);
+    color: var(--bg);
+  }
+  .btn-accent:hover { opacity: .85; }
+  .hero-tags { display: flex; gap: 10px; flex-wrap: wrap; }
+  .tag {
+    font-size: 0.72rem;
+    padding: 4px 12px;
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    color: var(--muted);
+    background: var(--bg2);
+  }
+  .hero-img-wrap {
+    width: 260px; height: 320px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--bg3);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+  }
+  .hero-img-wrap img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+  }
+  .img-placeholder {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 8px; color: var(--muted); font-size: 0.8rem; text-align: center; padding: 20px;
+  }
+  .img-placeholder .icon { font-size: 2.5rem; opacity: .3; }
+
+  /* ── ABOUT ── */
+  #about { background: var(--bg2); }
+  .about-cards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+  }
+  .about-card {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+  }
+  .about-card-label {
+    font-size: 0.65rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .about-card h3 {
+    font-family: var(--font-head);
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: -.02em;
+  }
+  .about-card p { font-size: 0.88rem; color: #aaa; line-height: 1.75; }
+
+  /* ── EXPERIENCE ── */
+  #experience { background: var(--bg); }
+  .exp-list { display: flex; flex-direction: column; gap: 16px; }
+  .exp-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    align-items: start;
+    position: relative;
+    transition: border-color .2s;
+  }
+  .exp-card:hover { border-color: #444; }
+  .exp-dot {
+    position: absolute;
+    left: -22px; top: 32px;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--bg3);
+    border: 2px solid var(--border);
+  }
+  .exp-dot.active { background: var(--accent1); border-color: var(--accent1); box-shadow: 0 0 8px var(--accent1); }
+  .exp-title {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: -.02em;
+    margin-bottom: 2px;
+  }
+  .exp-company { font-size: 0.82rem; color: var(--muted); margin-bottom: 10px; }
+  .exp-desc { font-size: 0.88rem; color: #aaa; line-height: 1.7; }
+  .exp-date {
+    font-size: 0.72rem;
+    color: var(--muted);
+    white-space: nowrap;
+    padding: 4px 10px;
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    height: fit-content;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .exp-date .present-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--accent1);
+    flex-shrink: 0;
+  }
+
+  /* ── PROJECTS ── */
+  #projects { background: var(--bg2); }
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .proj-card {
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--bg3);
+    transition: transform .2s, border-color .2s;
+  }
+  .proj-card:hover { transform: translateY(-3px); border-color: #444; }
+  .proj-header {
+    height: 160px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .proj-header.teal   { background: linear-gradient(135deg,#0f3460,#16213e); }
+  .proj-header.green  { background: linear-gradient(135deg,#0d3b2e,#1a4a38); }
+  .proj-header.brown  { background: linear-gradient(135deg,#3b2a0d,#4a3a1a); }
+  .proj-header.maroon { background: linear-gradient(135deg,#3b0d1f,#4a1a2a); }
+  .proj-tech {
+    position: absolute; top: 12px; left: 12px;
+    display: flex; gap: 6px; flex-wrap: wrap;
+  }
+  .proj-tech .tag { font-size: 0.65rem; padding: 2px 8px; }
+  .proj-links {
+    position: absolute; top: 12px; right: 12px;
+    display: flex; gap: 6px;
+  }
+  .proj-link-btn {
+    font-size: 0.65rem;
+    padding: 3px 10px;
+    border-radius: 100px;
+    border: 1px solid rgba(255,255,255,.15);
+    color: rgba(255,255,255,.7);
+    text-decoration: none;
+    background: rgba(0,0,0,.3);
+    transition: all .2s;
+  }
+  .proj-link-btn:hover { background: rgba(255,255,255,.1); color: #fff; }
+  .proj-link-btn.gh { border-color: rgba(255,255,255,.15); }
+  .proj-body { padding: 22px; }
+  .proj-name {
+    font-family: var(--font-head);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: -.02em;
+  }
+  .proj-desc { font-size: 0.84rem; color: #aaa; line-height: 1.7; }
+
+  /* ── SKILLS ── */
+  #skills { background: var(--bg); }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .skill-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px 24px;
+    cursor: pointer;
+    transition: border-color .2s;
+  }
+  .skill-card:hover { border-color: #555; }
+  .skill-name {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+    letter-spacing: -.01em;
+  }
+  .skill-sub { font-size: 0.74rem; color: var(--muted); margin-bottom: 14px; }
+  .skill-bar-track {
+    height: 3px;
+    background: var(--border);
+    border-radius: 100px;
+    overflow: hidden;
+  }
+  .skill-bar-fill {
+    height: 100%;
+    border-radius: 100px;
+    background: var(--text);
+    transition: width 1s ease;
+  }
+  .skill-note {
+    font-size: 0.75rem;
+    color: var(--muted);
+    display: flex; align-items: center; gap: 6px;
+  }
+  .skill-note::before { content: '○'; font-size: 0.65rem; }
+
+  /* ── EDUCATION ── */
+  #education { background: var(--bg2); }
+  .edu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .edu-card {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+  }
+  .edu-icon { font-size: 1.4rem; margin-bottom: 14px; opacity: .6; }
+  .edu-degree {
+    font-family: var(--font-head);
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+    letter-spacing: -.02em;
+    line-height: 1.4;
+  }
+  .edu-school { font-size: 0.82rem; color: var(--muted); margin-bottom: 14px; }
+  .edu-badges { display: flex; gap: 8px; flex-wrap: wrap; }
+  .edu-badge {
+    font-size: 0.68rem;
+    padding: 3px 10px;
+    border-radius: 100px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+  }
+
+  /* ── CONTACT ── */
+  #contact { background: var(--bg); }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 60px;
+    align-items: start;
+  }
+  .contact-info-item {
+    display: flex; align-items: center; gap: 14px;
+    margin-bottom: 28px;
+  }
+  .contact-icon-wrap {
+    width: 40px; height: 40px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    display: grid; place-items: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+    background: var(--bg2);
+  }
+  .contact-label { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+  .contact-value { font-size: 0.9rem; font-weight: 400; color: var(--text); }
+  .form-head {
+    font-family: var(--font-head);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    letter-spacing: -.02em;
+  }
+  .form-sub { font-size: 0.83rem; color: var(--muted); margin-bottom: 24px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+  .form-group label { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+  .form-group input,
+  .form-group textarea {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    outline: none;
+    transition: border-color .2s;
+    resize: none;
+  }
+  .form-group input:focus,
+  .form-group textarea:focus { border-color: #555; }
+  .form-group textarea { height: 110px; }
+  .btn-send {
+    background: var(--text);
+    color: var(--bg);
+    border: none;
+    padding: 11px 26px;
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex; align-items: center; gap: 8px;
+    transition: opacity .2s;
+  }
+  .btn-send:hover { opacity: .85; }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 28px 10%;
+    display: flex; justify-content: space-between; align-items: center;
+    background: var(--bg);
+  }
+  .footer-logo {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: 0.9rem;
+    letter-spacing: -.5px;
+    border: 1px solid var(--border);
+    padding: 3px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--text);
+  }
+  .footer-copy { font-size: 0.75rem; color: var(--muted); }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .hero-content > * { animation: fadeUp .6s ease both; }
+  .hero-content > *:nth-child(1) { animation-delay: .05s; }
+  .hero-content > *:nth-child(2) { animation-delay: .1s; }
+  .hero-content > *:nth-child(3) { animation-delay: .15s; }
+  .hero-content > *:nth-child(4) { animation-delay: .2s; }
+  .hero-content > *:nth-child(5) { animation-delay: .25s; }
+  .hero-content > *:nth-child(6) { animation-delay: .3s; }
+  .hero-img-wrap { animation: fadeUp .6s .35s ease both; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 860px) {
+    section { padding: 80px 6%; }
+    #hero { grid-template-columns: 1fr; padding-top: calc(var(--nav-h) + 40px); }
+    .hero-img-wrap { width: 200px; height: 240px; margin: 0 auto; }
+    .about-cards, .skills-grid { grid-template-columns: 1fr; }
+    .projects-grid, .edu-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    .form-row { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    footer { flex-direction: column; gap: 10px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">Ashim K.C.</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-icon">✦</div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-content">
+    <p class="hero-greeting">Hello, I'm</p>
+    <h1 class="hero-name">Ashim K.C.</h1>
+    <div class="hero-roles">
+      <span>CS Student</span>
+      <span class="dot">·</span>
+      <span>Backend Developer</span>
+      <span class="dot">·</span>
+      <span>AI/ML Builder</span>
+    </div>
+    <p class="hero-bio">
+      I'm a Computer Science student focused on intelligent systems and optimized backend infrastructure — passionate about turning AI research into tools people actually use.
+    </p>
+    <div class="hero-btns">
+      <a href="#projects" class="btn btn-outline">⊞ View Projects</a>
+      <a href="#contact" class="btn btn-accent">✉ Get in Touch</a>
+    </div>
+    <div class="hero-tags">
+      <span class="tag">Open to opportunities</span>
+      <span class="tag">Kathmandu, Nepal</span>
+      <span class="tag">Herald College Kathmandu</span>
+    </div>
+  </div>
+
+  <div class="hero-img-wrap">
+    <img src="images/Ashim_portfolio_image.png" alt="Ashim K.C.">
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <span class="section-label">About</span>
+  <h2 class="section-title">Who I Am</h2>
+  <div class="about-cards">
+    <div class="about-card">
+      <div class="about-card-label">Background</div>
+      <h3>My Story</h3>
+      <p>
+        I'm a Computer Science student at Herald College Kathmandu, building expertise at the crossroads of backend engineering and artificial intelligence. I care deeply about the full stack — from optimized database design to deploying ML models in production.
+      </p>
+    </div>
+    <div class="about-card">
+      <div class="about-card-label">Focus</div>
+      <h3>What I Do</h3>
+      <p>
+        My work spans backend systems, reinforcement learning research, and AI-powered applications. I build REST APIs, integrate Redis caching for Django apps, and explore multi-agent RL for optimization. I also lead the AI Learners Community in Kathmandu and teach programming at Mero Coding Class.
+      </p>
+    </div>
+    <div class="about-card">
+      <div class="about-card-label">Approach</div>
+      <h3>How I Work</h3>
+      <p>
+        I believe in learning in public — writing technical articles on Medium and running hands-on workshops to make AI education more accessible locally. Guided by continuous growth, I aim to turn AI research into tools people actually use.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <span class="section-label">Career</span>
+  <h2 class="section-title">Experience</h2>
+  <div class="exp-list">
+
+    <div class="exp-card" style="position:relative;">
+      <div class="exp-dot active"></div>
+      <div>
+        <div class="exp-title">Coding Instructor</div>
+        <div class="exp-company">Mero Coding Class</div>
+        <div class="exp-desc">Teaching programming fundamentals, Python, AI, and robotics while guiding students through hands-on coding projects and making technology education more accessible in the local community.</div>
+      </div>
+      <div class="exp-date"><span class="present-dot"></span>Feb 2026 — Present</div>
+    </div>
+
+    <div class="exp-card" style="position:relative;">
+      <div class="exp-dot active" style="background:#60a5fa;border-color:#60a5fa;box-shadow:0 0 8px #60a5fa;"></div>
+      <div>
+        <div class="exp-title">Steering Leader</div>
+        <div class="exp-company">AI Learners Community</div>
+        <div class="exp-desc">Leading a collaborative platform for AI enthusiasts to share knowledge and grow together through workshops, paper reading groups, and live demonstrations.</div>
+      </div>
+      <div class="exp-date"><span class="present-dot"></span>Mar 2024 — Present</div>
+    </div>
+
+    <div class="exp-card">
+      <div>
+        <div class="exp-title">Web Development Intern</div>
+        <div class="exp-company">SmartSites</div>
+        <div class="exp-desc">Built and maintained dynamic websites using Python, PHP, and MySQL. Worked on backend logic, database design, and WordPress plugin customization while collaborating directly with clients.</div>
+      </div>
+      <div class="exp-date">Jun 2024 — Aug 2024</div>
+    </div>
+
+    <div class="exp-card">
+      <div>
+        <div class="exp-title">Research &amp; Development</div>
+        <div class="exp-company">Codynn</div>
+        <div class="exp-desc">Contributed to research and development initiatives exploring emerging technologies and building prototype AI-powered solutions.</div>
+      </div>
+      <div class="exp-date">Jan 2024 — May 2024</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <span class="section-label">Work</span>
+  <h2 class="section-title">Projects</h2>
+  <div class="projects-grid">
+
+    <div class="proj-card">
+      <div class="proj-header teal">
+        <div class="proj-tech">
+          <span class="tag">FastAPI</span>
+          <span class="tag">LangGraph</span>
+          <span class="tag">Redis</span>
+          <span class="tag">React</span>
+        </div>
+        <span>🤖</span>
+        <div class="proj-links">
+          <a href="https://github.com/aseeeem-kc/" target="_blank" class="proj-link-btn gh">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-name">EasyServe Support SaaS</div>
+        <p class="proj-desc">A multi-agent, production-ready AI customer support platform. It automates ticket routing, utilizes RAG for context-aware answers, performs sentiment analysis via BERT, and includes robust multi-tenant security.</p>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-header green">
+        <div class="proj-tech">
+          <span class="tag">Python</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">SUMO</span>
+          <span class="tag">RL</span>
+        </div>
+        <span>🚦</span>
+        <div class="proj-links">
+          <a href="https://medium.com/@ashimkc7297/can-ai-fix-traffic-a-deep-dive-into-multi-agent-reinforcement-learning-ef53ec15b5a9" target="_blank" class="proj-link-btn">Read Article ↗</a>
+        </div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-name">Multi-Agent Traffic RL</div>
+        <p class="proj-desc">A deep reinforcement learning framework that optimizes traffic signal control in real-time. Leverages multi-agent coordination models to minimize average vehicle waiting times and city traffic congestion.</p>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-header brown">
+        <div class="proj-tech">
+          <span class="tag">AWS Lambda</span>
+          <span class="tag">API Gateway</span>
+          <span class="tag">S3</span>
+        </div>
+        <span>⚡</span>
+        <div class="proj-links">
+          <a href="https://medium.com/@ashimkc7297/creating-a-multi-function-calculator-rest-api-with-aws-lambda-81923ee15ca5" target="_blank" class="proj-link-btn">Read Article ↗</a>
+        </div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-name">Serverless AWS Lambda API</div>
+        <p class="proj-desc">A highly concurrent, serverless microservice designed for high throughput and scalability. Leverages AWS Lambda, API Gateway, and S3, maintaining minimal cold start latency and zero infrastructure overhead.</p>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-header maroon">
+        <div class="proj-tech">
+          <span class="tag">Django</span>
+          <span class="tag">Redis</span>
+          <span class="tag">PostgreSQL</span>
+        </div>
+        <span>🚀</span>
+        <div class="proj-links">
+          <a href="https://medium.com/@ashimkc7297/implementing-redis-in-a-django-application-03060e516209" target="_blank" class="proj-link-btn">Read Article ↗</a>
+        </div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-name">Django Redis Cache Layer</div>
+        <p class="proj-desc">A performance-optimized Django backend featuring a Redis caching layer. Successfully reduced database queries and API response times by up to 80% under peak loads through strategic query caching.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <span class="section-label">Expertise</span>
+  <h2 class="section-title">Skills</h2>
+  <div class="skills-grid">
+
+    <div class="skill-card">
+      <div class="skill-name">Backend Development</div>
+      <div class="skill-sub">Advanced · 88%</div>
+      <div class="skill-bar-track"><div class="skill-bar-fill" style="width:88%;"></div></div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">Machine Learning</div>
+      <div class="skill-sub">Advanced · 82%</div>
+      <div class="skill-bar-track"><div class="skill-bar-fill" style="width:82%;"></div></div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">Database &amp; Caching</div>
+      <div class="skill-sub">Advanced · 85%</div>
+      <div class="skill-bar-track"><div class="skill-bar-fill" style="width:85%;"></div></div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">AI-Software Integration</div>
+      <div class="skill-sub">Advanced · 78%</div>
+      <div class="skill-bar-track"><div class="skill-bar-fill" style="width:78%;"></div></div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">Cloud &amp; DevOps</div>
+      <div class="skill-sub">Intermediate · 75%</div>
+      <div class="skill-bar-track"><div class="skill-bar-fill" style="width:75%;"></div></div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-name">Generative AI</div>
+      <div class="skill-sub">Intermediate · 74%</div>
+      <div class="skill-bar-track"><div class="skill-bar-fill" style="width:74%;"></div></div>
+    </div>
+
+  </div>
+  <p class="skill-note">Click any skill card to read more about it</p>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <span class="section-label">Academic</span>
+  <h2 class="section-title">Education</h2>
+  <div class="edu-grid">
+
+    <div class="edu-card">
+      <div class="edu-icon">🎓</div>
+      <div class="edu-degree">B.Sc. Computer Science — Undergraduate</div>
+      <div class="edu-school">Herald College Kathmandu</div>
+      <div class="edu-badges">
+        <span class="edu-badge">July 2023 — 2026</span>
+        <span class="edu-badge">Kathmandu, Nepal</span>
+      </div>
+    </div>
+
+    <div class="edu-card">
+      <div class="edu-icon">📖</div>
+      <div class="edu-degree">+2 Computer Science — Higher Secondary</div>
+      <div class="edu-school">St. Xavier's School, Jawalakhel</div>
+      <div class="edu-badges">
+        <span class="edu-badge">August 2021 — May 2023</span>
+        <span class="edu-badge">Kathmandu, Nepal</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <span class="section-label">Contact</span>
+  <h2 class="section-title">Get in Touch</h2>
+  <div class="contact-grid">
+
+    <div>
+      <div class="contact-info-item">
+        <div class="contact-icon-wrap">✉</div>
+        <div>
+          <div class="contact-label">Email</div>
+          <div class="contact-value">ashimkc7297@gmail.com</div>
+        </div>
+      </div>
+      <div class="contact-info-item">
+        <div class="contact-icon-wrap">📍</div>
+        <div>
+          <div class="contact-label">Location</div>
+          <div class="contact-value">Kathmandu, Nepal</div>
+        </div>
+      </div>
+      <div class="contact-info-item">
+        <div class="contact-icon-wrap">🔗</div>
+        <div>
+          <div class="contact-label">LinkedIn</div>
+          <div class="contact-value"><a href="https://www.linkedin.com/in/ashimkchhetri/" target="_blank" style="color: inherit; text-decoration: none;">ashimkchhetri ↗</a></div>
+        </div>
+      </div>
+      <div class="contact-info-item">
+        <div class="contact-icon-wrap">💻</div>
+        <div>
+          <div class="contact-label">GitHub</div>
+          <div class="contact-value"><a href="https://github.com/aseeeem-kc/" target="_blank" style="color: inherit; text-decoration: none;">aseeeem-kc ↗</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="form-head">Send a Message</div>
+      <p class="form-sub">Fill out the form below and I'll get back to you as soon as possible.</p>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" placeholder="John Doe">
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="john@example.com">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Subject</label>
+        <input type="text" placeholder="Project Inquiry">
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea placeholder="Hello, I would like to discuss..."></textarea>
+      </div>
+      <button class="btn-send">✉ Send Message</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="#hero" class="footer-logo">Ashim K.C.</a>
+  <p class="footer-copy">© 2026 Ashim K.C. · Kathmandu, Nepal. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
